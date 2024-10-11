@@ -1,4 +1,5 @@
 import 'package:ecom/colors/app_colors.dart';
+import 'package:ecom/home/food_page_body.dart';
 import 'package:ecom/widgets/big_text.dart';
 import 'package:ecom/widgets/small_text.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +18,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
       body: Column(
         children: [
           Container(
-            width: double.infinity,
             child: Container(
-              margin: EdgeInsets.only(top: 45, bottom: 15),
               padding: EdgeInsets.all(20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -29,8 +28,8 @@ class _MainFoodPageState extends State<MainFoodPage> {
                       BigText(text: 'Uganda'),
                       Row(
                         children: [
-                          Icon(Icons.arrow_drop_down_rounded),
-                          SmallText(text: "Kampala"),
+                          SmallText(text: 'Kampala'),
+                          Icon(Icons.arrow_drop_down_rounded)
                         ],
                       )
                     ],
@@ -49,6 +48,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
               ),
             ),
           ),
+          FoodPageBody()
         ],
       ),
     );

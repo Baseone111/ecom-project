@@ -6,5 +6,6 @@ class AppColors {
   static final smallTextColor = Color(0xFF2e3253);
   static final textHolder = Color(0xFFedf0f8);
   static final textGrey = Color(0xFFafb1b5);
+  static final halfpurple = Color(0xffc63bdf);
   static final bestLiked = Color(0x7f07a877);
 }
