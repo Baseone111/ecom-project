@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class SmallText extends StatefulWidget {
   final Color? color;
   final String text;
+  TextOverflow overflow;
   double size;
   double height;
   SmallText(
@@ -10,7 +11,8 @@ class SmallText extends StatefulWidget {
       this.color = const Color(0xFF202e59),
       required this.text,
       this.size = 12,
-      this.height = 1.2})
+      this.height = 1.2,
+      this.overflow = TextOverflow.ellipsis})
       : super(key: key);
 
   @override
