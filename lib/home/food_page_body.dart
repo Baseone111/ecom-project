@@ -11,23 +11,15 @@ class FoodPageBody extends StatefulWidget {
 class _FoodPageBodyState extends State<FoodPageBody> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 250,
-      child: PageView.builder(
-          itemCount: 5,
-          itemBuilder: (context, position) {
-            return _buildPageItem(position);
-          }),
-    );
+   return Container(
+     child: PageView.builder(itemBuilder: (context, position){
+       return _itemBuilderPage(position);
+     }),
+   ); 
+  }
+  Widget _itemBuiderPage(int index){
+    return Container()
   }
 
-  Widget _buildPageItem(int index) {
-    return Container(
-      height: 220,
-      margin: EdgeInsets.only(right: 5, left: 5),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
-          color: index.isEven ? AppColors.bestLiked : AppColors.halfpurple),
-    );
-  }
+  
 }
