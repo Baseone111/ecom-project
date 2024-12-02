@@ -15,10 +15,10 @@ class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Container(
-            child: Container(
+      body: Container(
+        child: Column(
+          children: [
+            Container(
               padding: EdgeInsets.all(20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -28,7 +28,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                       BigText(text: 'Uganda'),
                       Row(
                         children: [
-                          SmallText(text: 'Kampala'),
+                          SmallText(text: "Kampala"),
                           Icon(Icons.arrow_drop_down_rounded)
                         ],
                       )
@@ -36,20 +36,23 @@ class _MainFoodPageState extends State<MainFoodPage> {
                   ),
                   Center(
                     child: Container(
-                      width: 45,
+                      child: Icon(
+                        Icons.search,
+                        color: Colors.white,
+                      ),
                       height: 45,
-                      child: Icon(Icons.search, color: Colors.white),
+                      width: 45,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(14),
+                          borderRadius: BorderRadius.circular(15),
                           color: AppColors.bestLiked),
                     ),
                   )
                 ],
               ),
             ),
-          ),
-          FoodPageBody()
-        ],
+            FoodPageBody()
+          ],
+        ),
       ),
     );
   }
